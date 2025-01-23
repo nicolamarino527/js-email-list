@@ -10,7 +10,7 @@
 // scriviamo le varibili input
 const endPoint = `https://flynn.boolean.careers/exercises/api/random/mail`;
 const emailList = document.getElementById('email-list');
-let emailNumber = 2;
+let emailNumber = 10;
 
 
 // creare una funzione per richiamare un a mail tramie  axios ad un api
@@ -20,7 +20,7 @@ function giveEmail() {
         // se la risposta è p ositiva
         .then(response => {
             const result = response.data.response; 
-            emailList.innerHTML += `<li>${result}</li>`;
+            emailList.innerHTML += `<li  id="list">${result}</li>`;
         })
         // se la risposta è negativa
         .catch(error => {
